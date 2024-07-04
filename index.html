@@ -7,29 +7,261 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="main.css" rel="stylesheet">
     <title>Frobel-Education</title>
+    <style>
+        body {
+            margin: 0 0;
+            padding: 0 0;
+            box-sizing: border-box;
+        }
+        
+        .body {
+            background-color: rgb(58, 58, 58);
+        }
+        
+        .container {
+            max-width: 1460px;
+        }
+        
+        .header {
+            max-width: 1360px;
+            ;
+        }
+        
+        .dropdown-content {
+            display: none;
+            /* Initially hide the dropdown */
+            position: absolute;
+            margin-top: 50px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .dropdown-content ul li {
+            padding: 8px 16px;
+            text-align: left;
+        }
+        
+        .dropdown-content ul li:hover {
+            background-color: #f1f1f1;
+            text-decoration: underline;
+        }
+        
+        .dropdown .btn {
+            cursor: pointer;
+        }
+        
+        .header {
+            position: relative;
+        }
+        
+        .box {
+            transition: all 0.3s ease;
+        }
+        
+        .box:hover {
+            box-shadow: 0 2 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+        
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .carousel {
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .boxC {
+            flex: 0 0 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+        
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="header px-5 py-1 bg-slate-500">
-            <ul>
-                <li>Home
+        <div class="header py-[15px] bg-slate-600 w-[1360px] h-[70px]">
+            <ul class="flex ml-[170px] text-white font-serif">
+                <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300">Home
                     <li>
-                        <li>About</li>
-                        <li>Vacancies</li>
-                        <li>News</li>
-                        <li>Gallery</li>
-                        <li>Franchise Opportunities</li>
-                        <li>Practical Endorsements</li>
-                        <li>Contact Us</li>
-                        <li>Results</li>
+                        <li class="px-5  pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300">About Us
+                            <span tabindex="0" role="button" class="btn m-1">V</span>
+                            <div class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                <ul>
+                                    <li>Vision</li>
+                                    <li>Management</li>
+                                    <li>Governance</li>
+                                    <li>Children</li>
+                                    <li>Extra Curricular and Enrichment</li>
+                                    <li>Ofsted</li>
+                                    <li>Outcomes and Results</li>
+                                    <li>Celebrating Success</li>
+                                    <li>Our Staff</li>
+                                    <li>Policies</li>
+                                </ul>
+                            </div>
+                            <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 ">Vacancies</li>
+                            <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " ">News</li>
+ <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " ">Gallery</li>
+                            <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " ">Franchise Opportunities</li>
+ <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 ">Practical Endorsements
+    <span tabindex="0 " role="button " class="btn m-1 ">V</span>
+    <div class="dropdown-content menu bg-slate-600 bg-base-100 rounded-box z-[1] w-52 p-2 shadow ">
+        <ul>
+            <li>GCSE Biology Practical Endorsement</li>
+            <li>GCSE Chemistry Practical Endorsement</li>
+            <li>GCSE Physics Practical Endorsement</li>
+            <li>A-Level Biology Practical Endorsement</li>
+            <li>A-Level Chemistry Practical Endorsement</li>
+            <li>A-Level Physics Practical Endorsement</li>
+            <li>Laboratory Skills Course</li>
+        </ul>
 
-
-
+        <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " >Contact Us</li>
+                            <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " ">Results</li>
             </ul>
         </div>
-    </div>
+        <div class="body grid grid-cols-2 py-5 h-[200px] w-[1360px] ">
+            <div class="py-2 flex justify-center items-center ">
+                <img src="logo.png " />
+            </div>
+            <div class="flex py-6 -ml-[75px]">
+                <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] border-red-400 hover:border-red-200 hover:shadow-xl transition-all duration-300 overflow-hidden box " style="">
+                    <div class="text-center text-red-500 ">
+                        <p class="font-semibold text-3xl ">Tc</p>
+                        <p class="text-[12px] ">Tuition Centres</p>
+                    </div>
+                </div>
 
+                <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] border-blue-400 transition-all duration-300 overflow-hidden box ">
+                    <div class="text-center text-blue-500 ">
+                        <p class="font-semibold text-3xl ">Is</p>
+                        <p class="text-[12px] ">Independent School</p>
+                    </div>
+                </div>
+
+                <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] border-orange-400 transition-all duration-300 overflow-hidden box ">
+                    <div class="text-center text-orange-500 ">
+                        <p class="font-semibold text-3xl ">Ec</p>
+                        <p class="text-[12px] ">Exam Centres</p>
+                    </div>
+                </div>
+
+                <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] p-2 border-[7px] hover:shadow-xl border-violet-400 transition-all duration-300 overflow-hidden box ">
+                    <div class="text-center text-violet-500 ">
+                        <p class="font-semibold text-3xl ">OI</p>
+                        <p class="text-[12px] ">Online Learning</p>
+                    </div>
+                </div>
+
+                <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] hover:shadow-xl border-lime-400 transition-all duration-300 overflow-hidden box ">
+                    <div class="text-center text-lime-500 ">
+                        <p class="font-semibold text-3xl ">S</p>
+                        <p class="text-[12px] ">STEM</p>
+                    </div>
+                </div>
+
+                <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] hover:shadow-xl border-cyan-600 transition-all duration-300 overflow-hidden box ">
+                    <div class="text-center text-cyan-600 ">
+                        <p class="font-semibold text-3xl ">P</p>
+                        <p class="text-[12px] ">Post-16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Body-2-->
+        <div class="body-section-2 py-[50px] h-[500px] relative" style="background:url('bg1.jpeg') no-repeat center/cover;">
+            <img decoding="async" width="500" height="212" src="https://frobeleducation.co.uk/wp-content/uploads/2022/11/forumlas-for-success-white.svg" alt="Forumlas for Success text white" title="forumlas-for-success-white" class="wp-image-1906 absolute -mt-[10px] left-1/2 transform -translate-x-1/2">
+        </div>
+        <!--carousel-->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="boxC">
+                    <p><span style="color: #039dff;">Frobel Independent School</span> is a <span style="color: #039dff;">‘good’</span> school in all aspects, <span style="color: #039dff;">Ofsted September 2022</span></p>
+                </div>
+                <div class="boxC"></div>
+                <div class="boxC"></div>
+                <div class="boxC"></div>
+            </div>
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.btn').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var dropdownContent = this.nextElementSibling;
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Optional: Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+                if (!event.target.matches('.btn')) {
+                    var dropdowns = document.querySelectorAll('.dropdown-content');
+                    dropdowns.forEach(function(dropdown) {
+                        dropdown.style.display = 'none';
+                    });
+                }
+            } // Initialization for ES Users
+        document.addEventListener("DOMContentLoaded", function() {
+            var carousel = document.querySelector(".carousel");
+            var slides = carousel.querySelectorAll(".boxC");
+            var totalSlides = slides.length;
+            var currentIndex = 0;
+
+            document.querySelector(".next").addEventListener("click", function() {
+                if (currentIndex < totalSlides - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            document.querySelector(".prev").addEventListener("click", function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            function updateCarousel() {
+                var offset = -currentIndex * 100 + "%";
+                carousel.style.transform = "translateX(" + offset + ")";
+            }
+        });
+    </script>
 </body>
 
 </html>
