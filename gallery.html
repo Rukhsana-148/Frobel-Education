@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>Frobel-Education</title>
+    <style>
+        body {
+            margin: 0 0;
+            padding: 0 0;
+            box-sizing: border-box;
+        }
+        
+        .body {
+            background-color: rgb(58, 58, 58);
+        }
+        
+        .container {
+            width: 1360px;
+        }
+        
+        .header {
+            max-width: 1360px;
+            ;
+        }
+        
+        .dropdown-content {
+            display: none;
+            /* Initially hide the dropdown */
+            position: absolute;
+            margin-top: 50px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .dropdown-content ul li {
+            padding: 8px 16px;
+            text-align: left;
+        }
+        
+        .dropdown-content ul li:hover {
+            background-color: #f1f1f1;
+            text-decoration: underline;
+        }
+        
+        .dropdown .btn {
+            cursor: pointer;
+        }
+        
+        .header {
+            position: relative;
+        }
+        
+        .box {
+            transition: all 0.3s ease;
+        }
+        
+        .box:hover {
+            box-shadow: 0 2 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header py-[15px] bg-slate-600 w-[1360px] h-[70px]">
+        <ul class="flex ml-[170px] text-white font-serif">
+            <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300">Home
+                <li>
+                    <li class="px-5  pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300">About Us
+                        <span tabindex="0" role="button" class="btn m-1">V</span>
+                        <div class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <ul>
+                                <li>Vision</li>
+                                <li>Management</li>
+                                <li>Governance</li>
+                                <li>Children</li>
+                                <li>Extra Curricular and Enrichment</li>
+                                <li>Ofsted</li>
+                                <li>Outcomes and Results</li>
+                                <li>Celebrating Success</li>
+                                <li>Our Staff</li>
+                                <li>Policies</li>
+                            </ul>
+                        </div>
+                        <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 ">
+                            <a href="vacancies.html">Vacancies</a>
+                        </li>
+                        <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 ">
+                            <a href="news.html">News</a></li>
+                        <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " "><a href=" gallery.html ">Gallery</a></li>
+                        <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " ">
+                            <a href=" franchis-opportunities.html ">Franchise Opportunities</a>
+                        </li>
+                        <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 ">Practical Endorsements
+                            <span tabindex="0 " role="button " class="btn m-1 ">V</span>
+                            <div class="dropdown-content menu bg-slate-600 bg-base-100 rounded-box z-[1] w-52 p-2 shadow ">
+                                <ul>
+                                    <li>GCSE Biology Practical Endorsement</li>
+                                    <li>GCSE Chemistry Practical Endorsement</li>
+                                    <li>GCSE Physics Practical Endorsement</li>
+                                    <li>A-Level Biology Practical Endorsement</li>
+                                    <li>A-Level Chemistry Practical Endorsement</li>
+                                    <li>A-Level Physics Practical Endorsement</li>
+                                    <li>Laboratory Skills Course</li>
+                                </ul>
+
+                                <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 ">Contact Us</li>
+                                <li class="px-5 pb-2 cursor-pointer hover:border-b-4 hover:border-blue-300 " ">Results</li>
+        </ul>
+    </div>
+    <div class="body grid grid-cols-2 py-5 h-[200px] w-[1360px] ">
+        <div class="py-2 flex justify-center items-center ">
+            <img src="logo.png " />
+        </div>
+        <div class="flex py-6 -ml-[75px] ">
+            <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] border-red-400 hover:border-red-200 hover:shadow-xl transition-all duration-300 overflow-hidden box " style=" ">
+                <div class="text-center text-red-500 ">
+                    <p class="font-semibold text-3xl ">Tc</p>
+                    <p class="text-[12px] ">Tuition Centres</p>
+                </div>
+            </div>
+
+            <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] border-blue-400 transition-all duration-300 overflow-hidden box ">
+                <div class="text-center text-blue-500 ">
+                    <p class="font-semibold text-3xl ">Is</p>
+                    <p class="text-[12px] ">Independent School</p>
+                </div>
+            </div>
+
+            <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] border-orange-400 transition-all duration-300 overflow-hidden box ">
+                <div class="text-center text-orange-500 ">
+                    <p class="font-semibold text-3xl ">Ec</p>
+                    <p class="text-[12px] ">Exam Centres</p>
+                </div>
+            </div>
+
+            <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] p-2 border-[7px] hover:shadow-xl border-violet-400 transition-all duration-300 overflow-hidden box ">
+                <div class="text-center text-violet-500 ">
+                    <p class="font-semibold text-3xl ">OI</p>
+                    <p class="text-[12px] ">Online Learning</p>
+                </div>
+            </div>
+
+            <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] hover:shadow-xl border-lime-400 transition-all duration-300 overflow-hidden box ">
+                <div class="text-center text-lime-500 ">
+                    <p class="font-semibold text-3xl ">S</p>
+                    <p class="text-[12px] ">STEM</p>
+                </div>
+            </div>
+
+            <div class="mr-5 justify-center items-center w-[100px] h-[100px] hover:w-[108px] hover:h-[108px] p-2 border-[7px] hover:shadow-xl border-cyan-600 transition-all duration-300 overflow-hidden box ">
+                <div class="text-center text-cyan-600 ">
+                    <p class="font-semibold text-3xl ">P</p>
+                    <p class="text-[12px] ">Post-16</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="education bg-blue-400 grid grid-cols-2 ">
+        <div class=" mt-4 text-white px-[150px] pb-[40px] ">
+            <p>Home>> Vacancies</p>
+            <p class="text-white font-bold text-[40px] mt-2 ">Frobel Education</p>
+        </div>
+        <div class="flex items-center justify-center ">
+            <div class="w-[85px] h-[95px] px-2 py-1 border-[7px] border-b-gray-100 ">
+                <p class="text-[23px] text-white font-bold text-center ">Fe</p>
+                <p class="text-xs text-white text-center ">Frobel Education</p>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="jobVacancies px-[170px] py-[20px] ">
+        <img src="photos.png " class="py-6 " />
+        <p>See Our Gallery Below....</p>
+        <div class="grid grid-cols-3 gap-3 mt-[80px] ">
+            
+            <img loading="lazy " decoding="async " width="400 " height="284 " src="https://frobeleducation.co.uk/wp-content/uploads/2024/06/0O3A7276-2-400x284.jpeg " srcset="https://frobeleducation.co.uk/wp-content/uploads/2024/06/0O3A7276-2.jpeg 479w,
+                                    https://frobeleducation.co.uk/wp-content/uploads/2024/06/0O3A7276-2-400x284.jpeg 480w " sizes="(max-width:479px) 479px, 100vw " class="wp-image-6978 ">
+   
+    
+    </div>
+    <img src=" vedios.png " class=" py-[80px] "/>
+    <div class="grid grid-cols-3 ">
+        <iframe width="319 " height="240 " src="https://www.youtube.com/embed/y1gblK3PKQE " title="Y8 students observed lava growing into caterpillars " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+                                    web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                                    <iframe width="319 " height="240 " src="https://www.youtube.com/embed/zJWk4emo_o4?si=m0vkTqQPjNfFgDUX " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                    gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                                    <iframe width="319 " height="240 " src="https://www.youtube.com/embed/SCOhpw9mdyo?si=zojCQlM-fTh71cne " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                    gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                                   </div>
+                                   <div class=" grid grid-cols-3 mt-[30px] ">
+                                    <iframe width="319 " height="240 " src="https://www.youtube.com/embed/sfqELV3glAM?si=7Fd4rOIo1c4CMkTn " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                    gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                                    <iframe width="319 " height="240 " src="https://www.youtube.com/embed/IFF3CgWH0DQ?si=tKQ9wsCc7Yjsde7O " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                    gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                                    <iframe width="319 " height="240 " src="https://www.youtube.com/embed/3ufSaEIcKQg?si=_qS40IB5yBBhxmgE " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                    gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                                </div>
+                                <div class=" mt-[30px] ">
+                                    <iframe width="319 " height="240 " src="https://www.youtube.com/embed/Y6BLbdM2u-4?si=5n_7tyx9m4ee47Ff " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                    gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+
+                                </div>
+
+                                </div>
+                            <div class="edorsed mt-[10%] pb-7 ">
+                                <p class="text-center ">Endorsed By:</p>
+                                <div class="flex items-center justify-center pt-10 pb-8 gap-2 ">
+                                    <img src="1 (1).png " class="pr-[70px] " /><img src="1 (2).png " class="pr-[70px] " /> <img src="1 (3).png " class="pr-[70px] " /><img src="1 (4).png " class="pr-[70px] " /><img src="1 (5).png " class="pr-[70px] " /></div>
+                                <div class="flex items-center justify-center pb-5 pt-4 ">
+
+                                    <img src="icon (1).png " class="ml-[1%] ">
+
+                                    <img src="icon (2).png " class="ml-[15%] " />
+
+                                </div>
+                            </div>
+                            <div class="bottom text-white py-[40px] " style="background:linear-gradient(rgba(23, 23, 219, 0.805), rgba(13, 4, 187, 0.894)) ">
+                                <div class="flex items-center justify-center py-4 mb-[50px] "><img decoding="async " width="300 " height="212 " src="https://frobeleducation.co.uk/wp-content/uploads/2022/11/forumlas-for-success-white.svg " alt="Forumlas
+                                    for Success text white " title="forumlas-for-success-white " class="wp-image-1906 absolute -mt-[10px] left-1/2 transform -translate-x-1/2 "></div>
+                                <div class="px-[100px] grid grid-cols-4 gap-4 ">
+                                    <div class="about text-white ">
+                                        <p class="font-semibold ">About</p>
+                                        <span>At Frobel Education, our top priority is placed on guiding students through their education, allowing them to push past their limitations and become confident, successful and promising individuals.</span>
+                                        <p><span>Our courses ensure that each and every student receives the upmost care in their educational needs. Our innovative resources and engaging teaching methods will guarantee every student feels confident in their upcoming exams.</span></p>
+                                    </div>
+                                    <div class="graunatee ">
+                                        <p class="font-semibold ">Our Guarantees</p>
+                                        <ul class="list-disc ml-[20px] ">
+                                            <li>Highly Qualified Staff</li>
+                                            <li>A Friendly Atmosphere</li>
+                                            <li>Modern Equipment</li>
+                                            <li>A Diverse Range of Resources</li>
+                                            <li>Progress Checks For Every Student</li>
+                                        </ul>
+                                    </div>
+                                    <div class="contact ">
+                                        <div class="et_pb_text_inner ">
+                                            <p><strong>Frobel Independent School</strong></p>
+                                            <p><strong>Email:</strong> <a href="mailto:info@frobel.co.uk " role="link ">info@frobel.co.uk</a><br><strong></strong></p>
+                                            <p><strong>Phone:</strong> <a href="tel:02089355931 " role="link ">020 8935 5931</a></p>
+                                            <p><span>67 – 73 Longbridge Road</span><br><span>Barking</span><br><span>Essex</span><br><span>IG11 8TG</span></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="connect ">
+                                        <p><strong>Connect with us</strong></p>
+                                        <ul class="mt-3 flex et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0_tb_footer clearfix et_pb_bg_layout_light ">
+
+
+
+
+                                            <li class="mr-2 et_pb_social_media_follow_network_0_tb_footer et_pb_social_icon et_pb_social_network_link et-social-facebook "><a href="https://www.facebook.com/FrobelEducationServices " class="icon et_pb_with_border
+                                    " title="Follow on Facebook " target="_blank " role="button "><span class="et_pb_social_media_follow_network_name " aria-hidden="true "><img src="icon (4).png "/></span></a></li>
+                                            <li class="mr-2 et_pb_social_media_follow_network_1_tb_footer et_pb_social_icon et_pb_social_network_link et-social-twitter "><a href="https://twitter.com/FrobelEducation " class="icon et_pb_with_border
+                                    " title="Follow on X " target="_blank " role="button "><span class="et_pb_social_media_follow_network_name " aria-hidden="true "><img src="icon (5).png "/></span></a></li>
+                                            <li class=" mr-2 et_pb_social_media_follow_network_2_tb_footer et_pb_social_icon et_pb_social_network_link et-social-instagram "><a href="https://www.instagram.com/frobeleducationservices " class="icon et_pb_with_border
+                                    " title="Follow on Instagram " target="_blank " role="button "><span class="et_pb_social_media_follow_network_name " aria-hidden="true "><img src="icon (6).png "/></span></a></li>
+                                            <li class="et_pb_social_media_follow_network_3_tb_footer et_pb_social_icon et_pb_social_network_link et-social-linkedin "><a href="https://www.linkedin.com/company/frobeleducation " class="icon et_pb_with_border
+                                    " title="Follow on LinkedIn " target="_blank " role="button "><span class="et_pb_social_media_follow_network_name " aria-hidden="true "><img src="icon (3).png "/></span></a></li>
+                                        </ul>
+                                        <div class="et_pb_module et_pb_text et_pb_text_5_tb_footer et_pb_text_align_left et_pb_bg_layout_light ">
+
+
+
+
+                                            <div class="et_pb_text_inner mt-3 "><strong>Policies</strong>
+                                                <p></p>
+                                                <p><a href="https://frobeleducation.co.uk/accessibility-statement/ " role="link ">Accessibility Statement</a></p>
+                                                <p><a href="https://frobeleducation.co.uk/cookie-policy/ " role="link ">Cookie Policy</a></p>
+                                                <p><a href="https://frobeleducation.co.uk/privacy-policy/ " role="link ">Privacy Policy</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-b pt-[40px] ">
+                                    <div class="flex items-center justify-center ">
+                                        <div class="mr-3 hover:bg-blue-400 h-[55px] TC text-center text-white bg-blue-700 px-1 py-1 border-4 w-[60px] border-b-gray-100 ">
+                                            <p class="font-semibold ">TC</p>
+                                            <p class="text-[7px] ">Tuition Centre</p>
+                                        </div>
+                                        <div class="mr-3 hover:bg-blue-400 h-[55px] TC text-center text-white bg-blue-700 leading-normal border-4 w-[60px] border-b-gray-100 ">
+                                            <p class="font-semibold ">IS</p>
+                                            <p class="text-[7px] ">Independent School</p>
+                                        </div>
+                                        <div class="mr-3 hover:bg-blue-400 h-[55px] TC text-center text-white bg-blue-700 px-1 py-1 border-4 w-[60px] border-b-gray-100 ">
+                                            <p class="font-semibold ">TE</p>
+                                            <p class="text-[7px] ">Exam Center</p>
+                                        </div>
+                                        <div class="mr-3 hover:bg-blue-400 h-[55px] TC text-center text-white bg-blue-700 border-4 w-[60px] border-b-gray-100 ">
+                                            <p class="font-semibold ">OI</p>
+                                            <p class="text-[7px] ">Online Instructor</p>
+                                        </div>
+                                        <div class="mr-3 hover:bg-blue-400 h-[55px] TC text-center text-white bg-blue-700 px-1 py-1 border-4 w-[60px] border-b-gray-100 ">
+                                            <p class="font-semibold ">S</p>
+                                            <p class="text-[7px] ">Steam</p>
+                                        </div>
+                                        <div class="mr-3 hover:bg-blue-400 h-[55px] TC text-center text-white bg-blue-700 px-1 py-1 border-4 w-[60px] border-b-gray-100 ">
+                                            <p class="font-semibold ">P</p>
+                                            <p class="text-[7px] ">Post-16</p>
+                                        </div>
+                                    </div>
+                                    <div class="copyright py-4 ">
+                                        <p style="text-align: center; ">Copyright 2024 Frobel Learning. Frobel Learning is the trading name of Saein Limited.<br>Saein Limited is registered in England &amp; Wales. Registration Number: 08831731</p>
+                                    </div>
+                                </div>
+                            </div>
+</body>
+
+</html>
