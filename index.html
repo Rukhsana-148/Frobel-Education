@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
     <title>Frobel-Education</title>
     <style>
@@ -19,7 +21,7 @@
         }
         
         .container {
-            max-width: 1460px;
+            width: 1360px;
         }
         
         .header {
@@ -69,42 +71,41 @@
             box-shadow: 0 2 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
         }
         
-        .carousel-container {
+        .flip-card {
+            perspective: 1000px;
+            width: 300px;
+            height: 350px;
+            margin: 20px;
+        }
+        
+        .flip-card-inner {
             position: relative;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .carousel {
-            display: flex;
-            overflow: hidden;
-        }
-        
-        .boxC {
-            flex: 0 0 100%;
-            padding: 20px;
+            width: 100%;
+            height: 100%;
             text-align: center;
-            background-color: #f0f0f0;
-            transition: transform 0.3s ease;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
         }
         
-        button {
+        .flip-card-front,
+        .flip-card-back {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
         }
         
-        .prev {
-            left: 10px;
+        .flip-card-front {
+            z-index: 2;
+            transform: rotateY(0deg);
         }
         
-        .next {
-            right: 10px;
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
         }
     </style>
 </head>
@@ -201,23 +202,191 @@
             </div>
         </div>
         <!--Body-2-->
-        <div class="body-section-2 py-[50px] h-[500px] relative" style="background:url('bg1.jpeg') no-repeat center/cover;">
+        <div class="body-section-2 w-[1360px]  py-[50px] h-[500px] relative" style="background:url('bg1.jpeg') no-repeat center/cover;">
             <img decoding="async" width="500" height="212" src="https://frobeleducation.co.uk/wp-content/uploads/2022/11/forumlas-for-success-white.svg" alt="Forumlas for Success text white" title="forumlas-for-success-white" class="wp-image-1906 absolute -mt-[10px] left-1/2 transform -translate-x-1/2">
         </div>
         <!--carousel-->
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="boxC">
-                    <p><span style="color: #039dff;">Frobel Independent School</span> is a <span style="color: #039dff;">‘good’</span> school in all aspects, <span style="color: #039dff;">Ofsted September 2022</span></p>
+        <div class="carousel -mt-[120px]">
+            <div id="slide1" class="carousel-item relative w-full flex justify-center items-center">
+                <div class="border-[20px] bg-white h-[400px] border-cyan-500 px-3 py-5">
+                    <img src="first.png" />
                 </div>
-                <div class="boxC"></div>
-                <div class="boxC"></div>
-                <div class="boxC"></div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
             </div>
-            <button class="prev">Prev</button>
-            <button class="next">Next</button>
+            <div id="slide2" class="carousel-item relative w-full flex justify-center items-center">
+                <div class="border-[20px] bg-white h-[400px] border-cyan-500 px-3 py-5">
+                    <img src="first.png" class="w-full" />
+                </div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full flex justify-center items-center">
+                <div class="border-[20px] bg-white h-[400px] border-lime-500 py-5 px-3">
+                    <img src="green.png" class="w-full" />
+                </div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full flex justify-center items-center">
+                <div class="border-[20px] bg-white h-[400px] border-red-700 py-5 px-3">
+                    <img src="red.png" class="w-full" />
+                </div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+        <div class="welcome mx-[100px] grid grid-cols-2">
+            <div class="">
+                <img decoding="async" src="https://frobeleducation.co.uk/wp-content/uploads/2022/09/ALT-Welcome-Word-illu.svg" alt="Handwritten image of the word Welcome" title="Welcome" class="wp-image-1158 w-[400px] py-[50px] ">
+                <p>We are set in the East End of London. Our businesses include an 11-16 Independent School, Tuition Centre, specialist STEM provision, a private Exam Centre, Creative and Sports’ Clubs, and On-line Learning.&nbsp; We are committed to ‘formulas
+                    for success’ and set high standards for our students and staff.&nbsp; Our student outcomes are impressive, and down to the hard work and commitment of our students, families and staff.&nbsp; We welcome learners from Year 1 to Year
+                    13 to our tuition centres and STEM laboratories, Years 7 – 11 to our independent school, and private exam candidates from around the world to our exam centre.</p>
+                <p class="py-1"><strong>Wendy Bower</strong></p>
+                <p><em>Deputy CEO and Executive Head of Frobel Education</em></p>
+            </div>
+            <div class="">
+                <img decoding="async" width="760" height="1013" src="https://frobeleducation.co.uk/wp-content/uploads/2023/02/wendy-frobel-7.webp" alt="" title="" srcset="https://frobeleducation.co.uk/wp-content/uploads/2023/02/wendy-frobel-7.webp 760w, https://frobeleducation.co.uk/wp-content/uploads/2023/02/wendy-frobel-7-480x640.webp 480w"
+                    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 760px, 100vw" class="wp-image-5296">
+            </div>
+
+        </div>
+        <div class="success  flex items-center justify-center pt-[70px]">
+            <img src="success.png" /> </div>
+
+        <div class="grid grid-cols-3 gap-8 mx-[110px]">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="TC.png" class="object-cover h-full w-full cursor-pointer" />
+                    </div>
+                    <div class="flip-card-back bg-red-500 text-white text-center py-[50px] px-[20px]">
+                        <p class="font-bold text-[20px]">TC = Tuition Center</p>
+                        <p class="text-lg mb-[30px]">Our tuition centres offer highly focused professional environments and higher impact specialist tutors.</p>
+                        <a href="" class="px-5 py-2 rounded-xl bg-white text-red-500">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="Is.png" class="object-cover h-full w-full cursor-pointer" />
+                    </div>
+                    <div class="flip-card-back bg-cyan-500 text-white text-center py-[50px] px-[20px]">
+                        <p class="font-bold text-[20px]">IS = Independent School</p>
+                        <p class="text-lg mb-[30px]">A School that achieves happiness and success for all students.</p>
+                        <a href="" class="px-5 py-2 rounded-xl bg-white text-cyan-500">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="Ec.png" class="object-cover h-full w-full cursor-pointer" />
+                    </div>
+                    <div class="flip-card-back bg-orange-500 text-white text-center py-[50px] px-[20px]">
+                        <p class="font-bold text-[20px]">EC = Exam Center</p>
+                        <p class="text-lg mb-[30px]">Frobel exam center is open to students from around the world. Our expert teacher specialise in all major boards, nationally and internationally.</p>
+                        <a href="" class="px-5 py-2 rounded-xl bg-white text-orange-500">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="OI.png" class="object-cover h-full w-full cursor-pointer" />
+                    </div>
+                    <div class="flip-card-back bg-violet-500 text-white text-center py-[50px] px-[20px]">
+                        <p class="font-bold text-[20px]">OL-Online Learning</p>
+                        <p class="text-lg mb-[30px]">Fully supervised world class online tutoring for international and long-distance student.</p>
+                        <a href="" class="px-5 py-2 rounded-xl bg-white text-violet-500">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="S.png" class="object-cover h-full w-full cursor-pointer" />
+                    </div>
+                    <div class="flip-card-back bg-lime-500 text-white text-center py-[50px] px-[20px]">
+                        <p class="font-bold text-[20px]">S-STEAM</p>
+                        <p class="text-lg mb-[30px]">Explore science and technology beyond boundaries in our specialist STEM laboratory for students in years 7-13!.</p>
+                        <a href="" class="px-5 py-2 rounded-xl bg-white text-lime-500">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="P.png" class="object-cover h-full w-full cursor-pointer" />
+                    </div>
+                    <div class="flip-card-back bg-teal-500 text-white text-center py-[50px] px-[20px]">
+                        <p class="font-bold text-[20px]">P=Post 16</p>
+                        <p class="text-lg mb-[30px]">Forge your pathway and amibitious in our highly professional post-16 centres.</p>
+                        <a href="" class="px-5 py-2 rounded-xl bg-white text-teal-500">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="building text-white mt-[100px]   font-serif h-[400px] w-[1360px] " style="background: linear-gradient(rgba(19, 60, 226, 0.6), rgba(15, 101, 187, 0.7)), url('building.jpeg') no-repeat center/cover;">
+            <p class="text-center text-[40px] pt-[150px]">Our Core Values</p>
+
+            <p class="text-center text-[45px] pt-[10px]  font-bold">Aspiration|Belonging|Integrity|Fortitude|Respect</p>
+
+        </div>
+        <div class="latest_news">
+            <img src="latest.png">
+            <div class="flex items-center justify-center">
+                <div class="w-[300px]">
+                    <div class="column size-1of3">
+                        <article id="post-6460" class="et_pb_post clearfix et_pb_blog_item_0_1 post-6460 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-latest category-news">
+
+                            <div class="et_pb_image_container">
+                                <a href="https://frobeleducation.co.uk/timings-for-tuition-students-over-the-october-half-term/" class="entry-featured-image-url" role="link"><img decoding="async" src="https://frobeleducation.co.uk/wp-content/uploads/2023/03/cropped-favicon-400x250.png" alt="Timings for Tuition Students over the May Half Term" class="" srcset="https://frobeleducation.co.uk/wp-content/uploads/2023/03/cropped-favicon.png 479w, https://frobeleducation.co.uk/wp-content/uploads/2023/03/cropped-favicon-400x250.png 480w "></a>
+                            </div>
+                            <h2 class="entry-title">
+                                <a href="https://frobeleducation.co.uk/timings-for-tuition-students-over-the-october-half-term/" role="link">Timings for Tuition Students over the May Half Term</a>
+                            </h2>
+
+                            <p class="post-meta"><span class="published">May 19, 2024</span></p>
+                            <div class="post-content">
+                                <div class="post-content-inner">
+                                    <p>May half term arrangements for Frobel Tuition &nbsp; Our weekday tuition session timings are changing over the May half term.&nbsp; &nbsp; Session 1 will run:&nbsp;&nbsp;11.00am – 1.00pm &nbsp;...</p>
+                                </div><a href="https://frobeleducation.co.uk/timings-for-tuition-students-over-the-october-half-term/" class="more-link" role="link">read more</a></div>
+                        </article>
+                    </div>
+                </div>
+                <div class="w-[300px]">
+                    <article id="post-6460" class="et_pb_post clearfix et_pb_blog_item_0_1 post-6460 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-latest category-news">
+
+                        <div class="et_pb_image_container">
+                            <a href="https://frobeleducation.co.uk/timings-for-tuition-students-over-the-october-half-term/" class="entry-featured-image-url" role="link"><img decoding="async" src="https://frobeleducation.co.uk/wp-content/uploads/2023/03/cropped-favicon-400x250.png" alt="Timings for Tuition Students over the May Half Term" class="" srcset="https://frobeleducation.co.uk/wp-content/uploads/2023/03/cropped-favicon.png 479w, https://frobeleducation.co.uk/wp-content/uploads/2023/03/cropped-favicon-400x250.png 480w "></a>
+                        </div>
+                        <h2 class="entry-title">
+                            <a href="https://frobeleducation.co.uk/timings-for-tuition-students-over-the-october-half-term/" role="link">Timings for Tuition Students over the May Half Term</a>
+                        </h2>
+
+                        <p class="post-meta"><span class="published">May 19, 2024</span></p>
+                        <div class="post-content">
+                            <div class="post-content-inner">
+                                <p>May half term arrangements for Frobel Tuition &nbsp; Our weekday tuition session timings are changing over the May half term.&nbsp; &nbsp; Session 1 will run:&nbsp;&nbsp;11.00am – 1.00pm &nbsp;...</p>
+                            </div><a href="https://frobeleducation.co.uk/timings-for-tuition-students-over-the-october-half-term/" class="more-link" role="link">read more</a></div>
+                    </article>
+                </div>
+            </div>
+
         </div>
 
+    </div>
+    </div>
     </div>
     <script>
         document.querySelectorAll('.btn').forEach(function(button) {
@@ -236,32 +405,29 @@
                     });
                 }
             } // Initialization for ES Users
-        document.addEventListener("DOMContentLoaded", function() {
-            var carousel = document.querySelector(".carousel");
-            var slides = carousel.querySelectorAll(".boxC");
-            var totalSlides = slides.length;
-            var currentIndex = 0;
 
-            document.querySelector(".next").addEventListener("click", function() {
-                if (currentIndex < totalSlides - 1) {
-                    currentIndex++;
-                    updateCarousel();
-                }
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const currentSlide = document.querySelector('.carousel-item.slide-in');
+                currentSlide.classList.remove('slide-in');
+                currentSlide.classList.add('slide-out');
+
+                const targetSlide = document.querySelector(button.getAttribute('href'));
+                targetSlide.classList.remove('slide-out');
+                targetSlide.classList.add('slide-in');
             });
+        });
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
 
-            document.querySelector(".prev").addEventListener("click", function() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                }
             });
-
-            function updateCarousel() {
-                var offset = -currentIndex * 100 + "%";
-                carousel.style.transform = "translateX(" + offset + ")";
-            }
         });
     </script>
 </body>
+
+</html>
+
+</html>
 
 </html>
